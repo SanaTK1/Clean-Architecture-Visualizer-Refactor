@@ -2,7 +2,7 @@ import path from 'path';
 import type { FileAccessInterface } from '../../data_access/fileAccessInterface.js';
 import type { InitProjectInputBoundary } from './initProjectInputBoundary.js';
 import type { InitProjectInputData } from './initProjectInputData.js';
-import { InitProjectOutputData } from './initProjectOutputData.js';
+import type { InitProjectOutputData } from './initProjectOutputData.js';
 
 export class InitProjectInteractor implements InitProjectInputBoundary {
   private readonly fileAccess: FileAccessInterface;
@@ -12,7 +12,7 @@ export class InitProjectInteractor implements InitProjectInputBoundary {
   constructor(
     fileAccess: FileAccessInterface,
     inputData: InitProjectInputData,
-    outputData: InitProjectOutputData = new InitProjectOutputData()
+    outputData: InitProjectOutputData
   ) {
     this.fileAccess = fileAccess;
     this.outputData = outputData;
